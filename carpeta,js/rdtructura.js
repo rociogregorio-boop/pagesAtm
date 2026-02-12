@@ -225,80 +225,11 @@ Usa condiciones anidadas (if, else if, else) y operadores lógicos para determin
 var estudiante= prompt("ingrese su nombre");
 var distanciaRecorrida= parseFloat(prompt("distancia en km: "))
 if ((18>edad)+(distanciaRecorrida>30)=== costo+*/
-// Datos iniciales
-var usuarioCorrecto = "Funval";
-var claveCorrecta = "Progra123";
-var saldo = 1000;
 
-var intentos = 0;
-var accesoPermitido = false;
-
-// ===== LOGIN =====
-while (intentos < 3 && accesoPermitido == false) {
-    var usuario = prompt("Ingrese su usuario:");
-    var clave = prompt("Ingrese su contraseña:");
-
-    if (usuario == usuarioCorrecto && clave == claveCorrecta) {
-        accesoPermitido = true;
-        alert("Bienvenido al sistema");
-    } else {
-        intentos++;
-        alert("Datos incorrectos. Intento " + intentos + " de 3");
-    }
-}
-
-// ===== SI FALLA 3 VECES =====
-if (accesoPermitido == false) {
-    alert("Cuenta bloqueada");
-}
-
-// ===== MENU PRINCIPAL =====
-while (accesoPermitido == true) {
-
-    var opcion = prompt(
-        "MENU\n" +
-        "1. Retirar\n" +
-        "2. Depositar\n" +
-        "3. Ver saldo\n" +
-        "4. Salir"
-    );
-
-    if (opcion == "1") {
-
-        var retiro = parseFloat(prompt("Ingrese monto a retirar:"));
-
-        if (retiro <= saldo) {
-            saldo = saldo - retiro;
-            alert("Retiro exitoso. Nuevo saldo: $" + saldo);
-        } else {
-            alert("Saldo insuficiente");
-        }
-
-    } else if (opcion == "2") {
-
-        var deposito = parseFloat(prompt("Ingrese monto a depositar:"));
-        saldo = saldo + deposito;
-        alert("Depósito exitoso. Nuevo saldo: $" + saldo);
-
-    } else if (opcion == "3") {
-
-        alert("Su saldo actual es: $" + saldo);
-
-    } else if (opcion == "4") {
-
-        alert("Gracias por usar el cajero");
-        accesoPermitido = false;
-
-    } else {
-
-        alert("Opción inválida");
-
-    }
-}
 
 //crea una funcion del area que me calcule el area
 //de un circulo
-function areaCirculo (R){
+/*function areaCirculo (R){
     let area= 3,14 * (R)**
     return area;
-}
+}*/
