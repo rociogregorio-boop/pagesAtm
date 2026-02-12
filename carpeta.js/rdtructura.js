@@ -174,21 +174,7 @@ const personas =[
  }
  */
 /*
-Ejercicio 1 – Calculadora de Promedio y Rendimiento
-Pide al usuario cuatro notas (del 0 al 100).
-Calcula el promedio y muestra un mensaje según el resultado:
 
-“Excelente” si el promedio es mayor o igual a 90
-
-“Bueno” si es mayor o igual a 75
-
-“Regular” si es mayor o igual a 60
-
-“Insuficiente” en caso contrario
-
-Instrucciones:
-Usa if-else-if y operadores lógicos para determinar el mensaje.
-Muestra el resultado con console.log() o alert().
 var contador =  0;
 var suma = 0;
 while (contador < 4 ) {
@@ -233,3 +219,34 @@ if ((18>edad)+(distanciaRecorrida>30)=== costo+*/
     let area= 3,14 * (R)**
     return area;
 }*/
+/*Ejercicio 1 – Calculadora de Promedio y Rendimiento
+Pide al usuario cuatro notas (del 0 al 100).
+Calcula el promedio y muestra un mensaje según el resultado:
+
+“Excelente” si el promedio es mayor o igual a 90
+
+“Bueno” si es mayor o igual a 75
+
+“Regular” si es mayor o igual a 60
+
+“Insuficiente” en caso contrario
+
+Instrucciones:
+Usa if-else-if y operadores lógicos para determinar el mensaje.
+Muestra el resultado con console.log() o alert().*/
+let nota1= parseFloat(prompt("ingrese la primera nota"));
+let nota2=parseFloat(prompt("ingrese segunda nota"));
+let nota3=parseFloat(prompt("ingrese tercera nota"));
+let nota4= parseFloat(prompt("ingrese la cuarta nota"));
+ let promedio= (nota1+nota2+nota3+nota4)/4;
+
+ if (promedio >=90) {
+    console.log ("promedio: "+promedio + "-> Excelente");
+
+ }else if(promedio >=75){
+    console.log ("promedio: "+ promedio + "->bueno");
+ } else if(promedio >=60){
+    console.log ("promedio: "+ promedio  + "->Regular");
+ }else (promedio <60){
+    console.log ("promedio: "+ promedio + "-> inssuficiente");
+ }

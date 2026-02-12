@@ -15,7 +15,8 @@ export default defineConfig({
         reto9: resolve(__dirname,'pages/reto9.html'),
         js: resolve(__dirname,'pages/mainj.html'),
         estructurajs: resolve(__dirname,'pages/estructuta.html'),
-        atmjs: resolve(__dirname,'pages/atm.html')
+        atmjs: resolve(__dirname,'pages/atm.html'),
+        calculadora: resolve(__dirname,'pages/estructuta.html')
 
         
       }
