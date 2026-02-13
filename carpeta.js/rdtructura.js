@@ -234,19 +234,72 @@ Calcula el promedio y muestra un mensaje según el resultado:
 Instrucciones:
 Usa if-else-if y operadores lógicos para determinar el mensaje.
 Muestra el resultado con console.log() o alert().*/
-let nota1= parseFloat(prompt("ingrese la primera nota"));
-let nota2=parseFloat(prompt("ingrese segunda nota"));
-let nota3=parseFloat(prompt("ingrese tercera nota"));
-let nota4= parseFloat(prompt("ingrese la cuarta nota"));
- let promedio= (nota1+nota2+nota3+nota4)/4;
+// Pedir las 4 notas
+let nota1 = parseFloat(prompt("Ingrese la primera nota (0-100):"));
+let nota2 = parseFloat(prompt("Ingrese la segunda nota (0-100):"));
+let nota3 = parseFloat(prompt("Ingrese la tercera nota (0-100):"));
+let nota4 = parseFloat(prompt("Ingrese la cuarta nota (0-100):"));
 
- if (promedio >=90) {
-    console.log ("promedio: "+promedio + "-> Excelente");
+let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
 
- }else if(promedio >=75){
-    console.log ("promedio: "+ promedio + "->bueno");
- } else if(promedio >=60){
-    console.log ("promedio: "+ promedio  + "->Regular");
- }else (promedio <60){
-    console.log ("promedio: "+ promedio + "-> inssuficiente");
- }
+if (promedio >= 90) {
+    console.log("Promedio: " + promedio + " -> Excelente");
+} else if (promedio >= 75) {
+    console.log("Promedio: " + promedio + " -> Bueno");
+} else if (promedio >= 60) {
+    console.log("Promedio: " + promedio + " -> Regular");
+} else {
+    console.log("Promedio: " + promedio + " -> Insuficiente");
+}
+
+
+----------------------------------
+
+let precioBase = 100;
+
+let edad = parseInt(prompt("Ingrese su edad:"));
+let estudiante = prompt("¿Es estudiante? (si/no)").toLowerCase();
+let distancia = parseFloat(prompt("Ingrese la distancia en km:"));
+let total = precioBase;
+if (edad < 18) {
+    total = precioBase * 0.5;
+} else if (edad > 60) {
+    total = precioBase * 0.4; 
+} else if (estudiante === "si") {
+    total = precioBase * 0.75; 
+} else {
+    total = precioBase; 
+}
+if (distancia > 30) {
+    total = total * 1.10; 
+}
+console.log("El costo final del viaje es: $" + total);
+-------------
+
+let total = parseFloat(prompt("Ingrese el precio total de su compra:"));
+let tarjeta = prompt("¿Tiene tarjeta de cliente frecuente? (si/no)").toLowerCase();
+
+let mensaje = "";
+
+
+if (total > 500) {
+    
+    total *= 0.90; 
+    mensaje = "Se aplicó un 10% de descuento";
+
+    if (tarjeta === "si") {
+        total *= 0.95; 
+        mensaje += " + 5% adicional por tarjeta";
+    }
+
+} else if (total <= 100) {
+    
+    total *= 1.05;
+    mensaje = "Se aplicó un recargo del 5%";
+
+} else {
+    mensaje = "No se aplicaron descuentos";
+}
+
+console.log("Precio final: $" + total.toFixed(2));
+console.log(mensaje);
