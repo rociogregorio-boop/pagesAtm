@@ -16,7 +16,8 @@ export default defineConfig({
         js: resolve(__dirname,'pages/mainj.html'),
         estructurajs: resolve(__dirname,'pages/estructuta.html'),
         atmjs: resolve(__dirname,'pages/atm.html'),
-        calculadora: resolve(__dirname,'pages/estructuta.html')
+        calculadora: resolve(__dirname,'pages/estructuta.html'),
+        funciones: resolve(__dirname,'pages/funciones.html')
 
         
       }
